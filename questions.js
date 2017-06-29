@@ -4,7 +4,7 @@ exports.questions = [
         cloze: 'Soviet'
     },
     {
-        full: 'From 1985 to 1990, Putin had worked in Germany(Country) under the guise of the director of the Dresden Friendship House.',
+        full: 'From 1985 to 1990, Putin had worked in Germany(country) under the guise of the director of the Dresden Friendship House.',
         cloze: 'Germany'
     },
     {
@@ -20,7 +20,7 @@ exports.questions = [
         cloze: 'judo'
     },
     {
-        full: 'In 1999, Putin\'s first book was published in collaboration with Vasily Shestakov and Alexei Levitsky. The book was devoted to practical judo training and was \n titled "Lets Learn Judo with Vladimir Putin."',
+        full: 'In 1999, Putin\'s first book was published in collaboration with Vasily Shestakov and Alexei Levitsky. The book was devoted to practical judo training and was titled "Lets Learn Judo with Vladimir Putin."',
         cloze: 'first'
     },
     {

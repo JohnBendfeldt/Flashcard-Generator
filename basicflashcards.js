@@ -43,7 +43,7 @@ function askQuestion() {
 			console.log('Game Over!');
 			console.log('Correct Answers: ' + correct);
 			console.log('Incorrect Answers: ' + wrong);
-			console.log('\Вы должны научиться ходить, прежде чем вы сможете убежать.\n');
+			console.log('\nВы должны научиться ходить, прежде чем вы сможете убежать.\n');
 
 			inquirer.prompt([
 				{
@@ -65,5 +65,5 @@ function askQuestion() {
 		}
 	})
 }
-console.log('Welcome to Putin Trivia, Comrade!')
+console.log('Welcome to Putin Trivia, Comrade! \n')
 askQuestion();
