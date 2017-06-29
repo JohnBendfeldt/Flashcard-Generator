@@ -1,12 +1,8 @@
 {
-  "name": "flashcards",
+  "name": "flashcard-generator",
   "version": "1.0.0",
   "description": "",
-  "main": "BasicCard.js",
-  "dependencies": {
-    "inquirer": "^3.1.1"
-  },
-  "devDependencies": {},
+  "main": "basicflashcards.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
