@@ -28,10 +28,10 @@ function askQuestion() {
 	]).then(function (answers) {
 		console.log('\n');
 		if (answers.userGuess.toLowerCase() === closeQuestions[currentQuestion].cloze.toLowerCase()) {
-			console.log('Correct, Comrade! \nТы могучий воин\n');
+			console.log('Correct, Comrade! \nТы могучий воин (You are a Mighty Warrior)\n');
 			correct++;
 		} else {
-			console.log('Wrong, Comrade! \nВы должны научиться ходить, прежде чем вы сможете убежать.\n');
+			console.log('Wrong, Comrade! \nВы должны научиться ходить, прежде чем вы сможете убежать. (You must learn to walk before you can escape.)\n');
 			wrong++;
 		}
 		console.log(closeQuestions[currentQuestion].full);
@@ -43,7 +43,7 @@ function askQuestion() {
 			console.log('Game Over!');
 			console.log('Correct Answers: ' + correct);
 			console.log('Incorrect Answers: ' + wrong);
-			console.log('\nВы должны научиться ходить, прежде чем вы сможете убежать.\n');
+			console.log('\nВы должны научиться ходить, прежде чем вы сможете убежать. (You must learn to walk before you can escape.)\n');
 
 			inquirer.prompt([
 				{
