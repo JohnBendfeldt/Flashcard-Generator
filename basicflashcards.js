@@ -1,17 +1,15 @@
 var inquirer = require('inquirer');
 
-var basiccard = require('./BasicCard.js');
-
 var clozecard = require('./ClozeCard.js');
 
 var questions = require('./questions.js').questions;
 
 
-var closeQuestions = [];
+var Questions = [];
 
 for (var i = 0; i < questions.length; i++) {
 	var flashcard = new clozecard.ClozeCard(questions[i].full, questions[i].cloze);
-	closeQuestions.push(flashcard);
+	Questions.push(flashcard);
 }
 
 var currentQuestion = 0;
@@ -22,21 +20,21 @@ function askQuestion() {
 	inquirer.prompt([
 		{
 			type: 'input',
-			message: closeQuestions[currentQuestion].partial + '\nAnswer: ',
-			name: 'userGuess'
+			message: Questions[currentQuestion].partial + '\nAnswer: ',
+			name: 'guess'
 		}
 	]).then(function (answers) {
 		console.log('\n');
-		if (answers.userGuess.toLowerCase() === closeQuestions[currentQuestion].cloze.toLowerCase()) {
+		if (answers.guess.toLowerCase() === Questions[currentQuestion].cloze.toLowerCase()) {
 			console.log('Correct, Comrade! \nТы могучий воин (You are a Mighty Warrior)\n');
 			correct++;
 		} else {
 			console.log('Wrong, Comrade! \nВы должны научиться ходить, прежде чем вы сможете убежать. (You must learn to walk before you can escape.)\n');
 			wrong++;
 		}
-		console.log(closeQuestions[currentQuestion].full);
+		console.log(Questions[currentQuestion].full);
 
-		if (currentQuestion < closeQuestions.length - 1) {
+		if (currentQuestion < Questions.length - 1) {
 			currentQuestion++;
 			askQuestion();
 		} else {
@@ -48,7 +46,7 @@ function askQuestion() {
 			inquirer.prompt([
 				{
 					type: 'confirm',
-					message: 'Would you like to play again?',
+					message: 'Would you like to play again, Comrade?',
 					name: 'Again'
 				}
 			]).then(function (answers) {
